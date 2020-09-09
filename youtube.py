@@ -15,7 +15,7 @@ if format == "video" or format == "Vidio":
 elif format == "audio" or format == "Audio":
     stream = yt.streams.filter(only_audio=True).all()
     print("Downloading....")
-    stream[0].downloads()
+    stream[0].download()
 
 # location = input("Enter the location to be Saved :- " )
 # ys = yt.streams.get_highest_resolution()
