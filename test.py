@@ -1,6 +1,9 @@
 from pytube import YouTube
+import os
 
-yt = YouTube("https://www.youtube.com/watch?v=SD5EwigRcNg&list=RD6I-4m-hMIOE&index=8")
+link = input("Enter the link :- ")
+yt = YouTube(link)
 stream = yt.streams.filter(type='audio',only_audio=True)
 print(stream[0])
 stream[0].download()
+os.rename(stream[0].default_filename, 'baarishein.mp3')
