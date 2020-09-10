@@ -31,15 +31,15 @@ def download(link,format_choosen):
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 3:
-        stream = yt.streams.filter(res = "360p",adaptive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "360p",progressive=True,file_extension='mp4')
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 4:
-        stream = yt.streams.filter(res = "240p",adaptive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "240p",progressive=True,file_extension='mp4')
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 5:
-        stream = yt.streams.filter(res = "144p",adaptive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "144p",progressive=True,file_extension='mp4')
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 6:
