@@ -20,15 +20,15 @@ sudo apt-get install python3.8.2
 #### Pytube
 ## Running the application
 
-### Download pytube
+## Download pytube
 
-#### For Windows :- 
+### For Windows :- 
    ##### Run PowerShell/Command Prompt as Administrator and run the following command
  ```
  pip install pytube
  ```
 
-#### For Linux/MacOS :-
+### For Linux/MacOS :-
    ##### Run the terminal and type the following command.
     
 ```
