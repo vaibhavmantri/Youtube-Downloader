@@ -43,5 +43,5 @@ sudo pip install pytube
   #### Pytube3 :- https://python-pytube.readthedocs.io/en/latest/
   
 ## To-Do :-
- #### 1. Download Video in different Resolutions
+ #### 1. Sync video and audio together
  #### 2. Convert application into .exe file
