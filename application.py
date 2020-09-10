@@ -2,18 +2,15 @@ import tkinter as tk
 from pytube import YouTube
 import os
 
+# Label Field
 master = tk.Tk()
 tk.Label(master, text="Link of the Youtube Video").grid(row=0)
 
+# Entry Field
 e1 = tk.Entry(master)
 e1.grid(row=0, column=1)
-# tk.Button(master, 
-#           text='Okay!', 
-#           command=printing).grid(row=3, 
-#                                     column=0, 
-#                                     sticky=tk.W, 
-#                                     pady=4)
 
+# Function for Downloading
 def download(link):
     yt = YouTube(link)
     song = yt.title
@@ -26,9 +23,15 @@ def download(link):
     stream[0].download()
     print("Download Complete...!")
 
-def printing():
+def printing(value):
     print(e1.get())
     download(e1.get())
+
+radbtn = tk.Radiobutton(master,text = "Helleww!", value = 1,variable = "radbtn1")
+radbtn.grid(row = 1, column = 1)
+
+# Button for Confirmation
 button = tk.Button(master, text = "Download!", command = printing)
 button.grid(row = 1,column = 0)
 master.mainloop()
+
