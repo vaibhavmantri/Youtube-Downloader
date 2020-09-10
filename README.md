@@ -24,17 +24,16 @@ sudo apt-get install python3.8.2
 
 #### For Windows :- 
    ##### Run PowerShell/Command Prompt as Administrator and run the following command
-    
-    ```
-    pip install pytube
-    ```
+ ```
+ pip install pytube
+ ```
 
 #### For Linux/MacOS :-
    ##### Run the terminal and type the following command.
     
-    ```
-    sudo pip install pytube
-    ```
+```
+sudo pip install pytube
+```
     
 ## Clone the Repository :- https://github.com/vaibhavmantri1/Youtube-Downloader.git    
 
