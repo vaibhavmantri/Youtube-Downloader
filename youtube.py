@@ -18,8 +18,8 @@ def download(format,song):
         stream[0].download()
 
 # Provide the link
-link = input("Enter the link :- ")
-yt = YouTube(link)
+# link = input("Enter the link :- ")
+yt = YouTube("https://www.youtube.com/watch?v=Yv3MvtdS5Pw&list=RDMMYv3MvtdS5Pw&index=1")
 
 # Determines the Title of the song
 song = yt.title
