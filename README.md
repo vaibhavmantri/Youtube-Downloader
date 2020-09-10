@@ -42,3 +42,7 @@ sudo apt-get install python3.8.2
   #### Python :- https://docs.python.org/3/
   #### Tkinter :- https://docs.python.org/3/library/tkinter.html
   #### Pytube3 :- https://python-pytube.readthedocs.io/en/latest/
+  
+## To-Do :-
+ #### 1. Download Video in different Resolutions
+ #### 2. Convert application into .exe file
