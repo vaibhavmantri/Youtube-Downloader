@@ -19,27 +19,27 @@ def download(link,format_choosen):
     song = yt.title
     print(format_choosen) 
     if format_choosen == 0:
-        stream = yt.streams.filter(res = "1080p",adaptive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "1080p")
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 1:
-        stream = yt.streams.filter(res = "720p",adaptive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "720p")
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 2:
-        stream = yt.streams.filter(res = "480p",adaptive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "480p")
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 3:
-        stream = yt.streams.filter(res = "360p",progressive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "360p")
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 4:
-        stream = yt.streams.filter(res = "240p",progressive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "240p")
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 5:
-        stream = yt.streams.filter(res = "144p",progressive=True,file_extension='mp4')
+        stream = yt.streams.filter(res = "144p")
         print("Downloading....")
         stream[0].download()
     elif format_choosen == 6:
