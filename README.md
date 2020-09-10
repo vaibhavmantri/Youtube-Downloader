@@ -35,7 +35,7 @@ sudo apt-get install python3.8.2
 sudo pip install pytube
 ```
     
-## Clone the Repository :- https://github.com/vaibhavmantri1/Youtube-Downloader.git    
+### Clone the Repository :- https://github.com/vaibhavmantri1/Youtube-Downloader.git    
 
 ## Documentation :-
   #### Python :- https://docs.python.org/3/
