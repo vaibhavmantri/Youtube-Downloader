@@ -6,17 +6,24 @@ import os
 # Label Field
 master = tk.Tk()
 master.title("Youtube Downloader")
-master.geometry('500x500')
+master.geometry('1000x500')
 tk.Label(master, text="Link of the Youtube Video").grid(row=0)
 
 # Entry Field
 e1 = tk.Entry(master)
 e1.grid(row=0, column=1)
 
+
+text = tk.Text(master)
+text.grid(row = 2,column = 1)
+
 # Function for Downloading
 def download(link,format_choosen):
     yt = YouTube(link)
     song = yt.title
+    print(yt.title)
+    text.insert(tk.INSERT,yt.title)
+    text.insert(tk.INSERT,"\nDownloading.....")
     print(format_choosen) 
     if format_choosen == 0:
         stream = yt.streams.filter(res = "1080p")
@@ -51,12 +58,14 @@ def download(link,format_choosen):
         print("Downloading....")
         stream[0].download()
     print("Download Complete...!")
+    text.insert(tk.INSERT, "\nDownload Complete......!")
     
 
 def printing():
     print(e1.get())
     download(e1.get(),format_choosen.current())
 
+#Dropdown Format
 x = tk.StringVar()
 format_choosen = ttk.Combobox(master,width = '7', textvariable = x)
 format_choosen['values'] = (
