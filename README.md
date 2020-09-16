@@ -1,6 +1,14 @@
 # Youtube-Downloader
 ### This is a Python based Application where it helps you to download Youtube Videos in high resolution or Audio(.mp3 format)
 
+## Images :- 
+
+<img src = './images/home.PNG'>
+<br> 
+<img src = './images/format.PNG'>
+<br>
+<img src = './images/done.PNG'>
+
 ## Install Python
 
 #### For Windows :- https://www.python.org/downloads/release/python-385/
@@ -45,3 +53,4 @@ sudo pip install pytube
 ## To-Do :-
  #### 1. Sync video and audio together
  #### 2. Convert application into .exe file
+ #### 3. Download at a specific location anywhere
