@@ -30,15 +30,15 @@ def download(link,format_choosen):
         # stream = yt.streams.filter(res = "1080p")
         print("Downloading....")
         # stream[0].download()
-        join_audio_video(song,yt)
+        join_audio_video(song,yt, "1080p")
     elif format_choosen == 1:
-        stream = yt.streams.filter(res = "720p")
+        join_audio_video(song,yt, "720p")
         print("Downloading....")
-        stream[0].download()
+        # stream[0].download()
     elif format_choosen == 2:
-        stream = yt.streams.filter(res = "480p")
+        join_audio_video(song,yt, "480p")
         print("Downloading....")
-        stream[0].download()
+        # stream[0].download()
     elif format_choosen == 3:
         stream = yt.streams.filter(res = "360p")
         print("Downloading....")
@@ -64,8 +64,8 @@ def download(link,format_choosen):
     print("Download Complete...!")
     text.insert(tk.INSERT, "\nDownload Complete......!")
     
-def join_audio_video(song,yt):
-    download_video(song,yt)
+def join_audio_video(song,yt,resolution):
+    download_video(song,yt, resolution)
     download_audio(song,yt)
     
     clip1 = VideoFileClip("2.mp4")
@@ -73,8 +73,8 @@ def join_audio_video(song,yt):
     final_clip = concatenate_videoclips([clip1,clip2])
     final_clip.write_videofile(".mp4")
 
-def download_video(song, yt):
-    stream = yt.streams.filter(res = "1080p")
+def download_video(song, yt, resolution):
+    stream = yt.streams.filter(res = resolution)
     stream[0].download()
     os.rename(song + ".mp4", "2.mp4")
 
