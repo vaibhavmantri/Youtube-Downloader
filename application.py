@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from pytube import YouTube
 import os
+from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 # Label Field
 master = tk.Tk()
@@ -26,9 +27,10 @@ def download(link,format_choosen):
     text.insert(tk.INSERT,"\nDownloading.....")
     print(format_choosen) 
     if format_choosen == 0:
-        stream = yt.streams.filter(res = "1080p")
+        # stream = yt.streams.filter(res = "1080p")
         print("Downloading....")
-        stream[0].download()
+        # stream[0].download()
+        join_audio_video(song,yt)
     elif format_choosen == 1:
         stream = yt.streams.filter(res = "720p")
         print("Downloading....")
@@ -53,13 +55,40 @@ def download(link,format_choosen):
         stream = yt.streams.filter(type='audio',only_audio=True)
         print(stream[0])
         stream[0].download()
+        
         #Convert the Present mp4 Audio preset to mp3 extension
         os.rename(stream[0].default_filename, song + '.mp3')
         print("Downloading....")
         stream[0].download()
+        os.remove(song + '.mp4')
     print("Download Complete...!")
     text.insert(tk.INSERT, "\nDownload Complete......!")
     
+def join_audio_video(song,yt):
+    download_video(song,yt)
+    download_audio(song,yt)
+    
+    clip1 = VideoFileClip("2.mp4")
+    clip2 = VideoFileClip("1.mp3")
+    final_clip = concatenate_videoclips([clip1,clip2])
+    final_clip.write_videofile(".mp4")
+
+def download_video(song, yt):
+    stream = yt.streams.filter(res = "1080p")
+    stream[0].download()
+    os.rename(song + ".mp4", "2.mp4")
+
+
+
+def download_audio(song,yt):
+    stream = yt.streams.filter(type='audio',only_audio=True)
+    print(stream[0])
+    stream[0].download()
+    #Convert the Present mp4 Audio preset to mp3 extension
+    os.rename(stream[0].default_filename,'1' + '.mp3')
+    print("Downloading....")
+    stream[0].download()
+    return 0
 
 def printing():
     print(e1.get())
