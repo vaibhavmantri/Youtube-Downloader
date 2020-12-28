@@ -52,5 +52,6 @@ sudo pip install pytube
   
 ## To-Do :-
  #### 1. Sync video and audio together
- #### 2. Convert application into .exe file
- #### 3. Download at a specific location anywhere
+ #### 2. Download at a specific location anywhere
+
+### This application won't work due to changes in the youtube guidlines of the video URL and the un updated 'selenium' driver
